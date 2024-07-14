@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+/* Style for the entire application */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(70, 69, 69);
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for the App component container */
+.app {
+  width: 100%;
+  /* Set width to 100% */
+  height: 100vh;
+  /* Fix the height */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding: auto;
+  /* Remove margins */
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the MainComponent container */
+.main-component {
+  display: flex;
+  margin: 100px;
+  height: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the Webcam component container */
+.webcam {
+  box-shadow: 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 800px;
+  height: 600px;
+}
+
+video {
+  box-shadow: 10px black;
+  margin: auto;
+  /* aligns element to center */
+  width: 800px;
+  height: 600px;
+  border: 2px solid black;
+  /* Adjust the width and color of the border */
+  border-radius: 10px;
+  /* Optional: Adds padding between the border and the video */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+canvas {
+  display: none;
+  /* make the canvas not visible */
+}
+
+.buttons-container {
+  position: relative;
+  /* This is the parent container */
+  flex-direction: column;
+  /* stack them vertically */
+  margin-left: 40px;
+  /* add a margin to separate them from the webcam container */
+  width: 200px;
+  height: 100%;
+  margin-top: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.register-ok-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/accept_button.png);
+}
+
+.register-cancel-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/cancel_button.png);
+}
+
+.login-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/login_button.png);
+}
+
+.register-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/register_new_user_button.png);
+}
+
+.goback-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/go_back_button.png);
+}
+
+.download-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/download_logs_icon.png);
+}
+
+.login-container {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.goback-container {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.download-container {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.register-text-container {
+  width: 195px;
+  height: 50px;
+  position: absolute;
+  top: 80px;
+}
+
+.register-text {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
+
+.register-ok-container {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.register-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.register-cancel-container {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.login-button:hover {
+  background-color: whitesmoke;
+  /* Green */
+  color: black;
+}
+
+.register-ok:hover {
+  background-color: whitesmoke;
+  /* Green */
+  color: black;
+}
+
+.logout-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/logout_button.png);
+}
+
+.logout-button:hover {
+  background-color: whitesmoke;
+  /* Green */
+  color: black;
+}
+
+.logout-container {
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.admin-button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  background-image: url(../public/images/admin_button.png);
+}
+
+.admin-button:hover {
+  background-color: whitesmoke;
+  /* Green */
+  color: black;
+}
+
+.admin-container {
+  z-index: 2;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 200px;
+  height: 100px;
+}
+
+.hidden {
+  visibility: hidden;
+  transition: visibility 0.05s;
+}
+
+.visible {
+  visibility: visible;
+  transition: visibility 0.5s;
 }
